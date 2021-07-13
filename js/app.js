@@ -9,7 +9,7 @@ let minOpj = [23, 3, 11, 20, 2];
 let maxOpj = [65, 24, 38, 38, 16];
 let avgOpj = [6.3, 1.2, 3.7, 2.3, 4.6];
 let locationOpj = [];
-
+let totalofTotals = 0;
 // constructor function
 function Store(Locations, minOpj, maxOpj, avgOpj) {
     // Parameters
@@ -69,7 +69,7 @@ function tableHeader() {
     table.appendChild(storeRow);
     storeRow.appendChild(thTime);
 
-    thTime.textContent = '';//first cell
+    thTime.textContent = 'Location Name';//first cell
 
     for (let i = 0; i < time.length; i++) {
         let th = document.createElement('th');
@@ -124,10 +124,11 @@ function tableEnd() {
         let tdTotDay = document.createElement('td');
         storeRow.appendChild(tdTotDay);
         tdTotDay.textContent = hourlyTot;
+        totalofTotals += hourlyTot;
     }
     let totfin = document.createElement('td');
     storeRow.appendChild(totfin);
-    totfin.textContent = '';
+    totfin.textContent = totalofTotals;
 }
 
 // calling all functions
