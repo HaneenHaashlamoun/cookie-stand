@@ -27,12 +27,12 @@ function Store(Locations, minOpj, maxOpj, avgOpj) {
 }
 
 
-// creat opj
-let Seattle = new Store(Locations[0], minOpj[0], maxOpj[0], avgOpj[0], 0);
-let Tokyo = new Store(Locations[1], minOpj[1], maxOpj[1], avgOpj[1], 0);
-let Dubai = new Store(Locations[2], minOpj[2], maxOpj[2], avgOpj[2], 0);
-let Paris = new Store(Locations[3], minOpj[3], maxOpj[3], avgOpj[3], 0);
-let Lima = new Store(Locations[4], minOpj[4], maxOpj[4], avgOpj[4], 0);
+let Seattle = new Store(Locations[0], minOpj[0], maxOpj[0], avgOpj[0]);
+let Tokyo = new Store(Locations[1], minOpj[1], maxOpj[1], avgOpj[1]);
+let Dubai = new Store(Locations[2], minOpj[2], maxOpj[2], avgOpj[2]);
+let Paris = new Store(Locations[3], minOpj[3], maxOpj[3], avgOpj[3]);
+let Lima = new Store(Locations[4], minOpj[4], maxOpj[4], avgOpj[4]);
+
 
 
 // random number of customers each hour each store
@@ -130,8 +130,49 @@ function tableEnd() {
     storeRow.appendChild(totfin);
     totfin.textContent = totalofTotals;
 }
-
 // calling all functions
 tableHeader();
 tableBody();
 tableEnd();
+
+
+
+
+//Form
+let form = document.getElementById('form');
+
+// Handele Event
+form.addEventListener('submit', createUserStore);
+
+//reset table
+function reset() {
+    //reset
+    totalofTotals = 0;
+    table.textContent = '';
+}
+
+function createUserStore(event) {
+
+    event.preventDefault();
+    let locationName = event.target.location.value;
+    let minCustomer = event.target.minCustomer.value;
+    let maxCustomer = event.target.maxCustomer.value;
+    let avgCustomer = event.target.avgCustomer.value;
+ 
+    //INSERTING user info
+    Locations.push(locationName);
+    minOpj.push(minCustomer);
+    maxOpj.push(maxCustomer);
+    avgOpj.push(avgCustomer);
+    console.log(locationOpj.length);
+    let userStore = new Store(locationName, minCustomer, maxCustomer, avgCustomer);
+    reset();
+    userStore.RandomNumber();
+    userStore.CookiesNumAvg();
+  
+    //Rendering    
+    tableHeader();
+    tableBody();
+    tableEnd();
+
+}
