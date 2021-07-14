@@ -6,17 +6,44 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Salmon Cookie Sales</title>
-    <link rel="stylesheet" type="text/css" href="css/reset.css" />
+    <!-- <link rel="stylesheet" type="text/css" href="css/reset.css" /> -->
     <link rel="stylesheet" type="text/css" href="css/style.css" />
 
     <style>
-        
+
     </style>
 </head>
+
 <body>
     <header><button type="submit" onclick="window.location.href='/index.html'">Home</button></header>
-    
+
     <main>
+        <div>
+            <form id="form">
+                <fieldset>
+                    <h2>Add New Salmon Cookies Sales :</h2>
+                        <br>                    
+                        <label for="location">location Name :</label>
+                        <input type="text" id="location" required>
+                        <br>
+                        <br>
+                        <label for="minCustomer">Min Customer : </label>
+                        <input type="number" id="minCustomer" required>
+                        <br>
+                        <br>
+                        <label for="maxCustomer">Max Customer : </label>
+                        <input type="number" id="maxCustomer" required>
+                        <br>
+                        <br>
+                        <label for="avgCustomer">Avg Customer : </label>
+                        <input type="number" id="avgCustomer" step="0.01" required>
+                        <br>
+                        <br>
+                        <input type="submit" id="submit" value="Submit" required>
+                </fieldset>
+
+            </form>
+        </div>
         <br>
         <table id="parent"></table>
     </main>

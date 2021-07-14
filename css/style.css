@@ -51,16 +51,18 @@ header img{
 
 
 section{
-    
-    display: list-item;
+    display: block;
+    /* display: list-item; */
     margin: 50px;
-    /* padding: 50px; */
+    padding: 50px;
 
 
 }
 
 section p {    
+    /* display: inline; */
     white-space: pre;
     font-style: normal;
-    margin: 0px auto;
+    /* float: right; */
+    /* margin: 0px auto; */
 }
