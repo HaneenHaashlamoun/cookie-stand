@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+
+
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: black;
+    background-color: maroon;
    
     color: whitesmoke;
 }
@@ -16,9 +19,10 @@ table, tr, th, td {
 header {
     display: block;
     align-items: center;
-
+    font-family: 'Dancing Script', cursive;
     margin: 30px;
     padding: 20px;
+    color: yellow;
 }
 
 button {
@@ -31,6 +35,8 @@ button {
     border-radius: 3px;
     transition: 350ms;
     cursor: pointer;
+    font-family: Georgia;
+    color: orange;
 }
 
 button:hover {
@@ -39,9 +45,14 @@ button:hover {
 
 header h1 {
     display: block;
-    font-size: 40px;
+    font-size: 90px;
     font-weight: bold;
-    /* margin-bottom: 10px; */
+    
+}
+
+h2{
+    font-family: Georgia;
+    color: orange;
 }
 
 div img {
@@ -55,20 +66,45 @@ section {
 }
 
 p {
-    /* display: inline; */
+    
     white-space: pre;
     font-style: normal;
-    
-    /* float: right; */
-    /* margin: 0px auto; */
+    font-family: Arial;
+    color: gold;
 }
 
-/* div{
 
-    display: block;
-} */
 
 #family{
     width: 40%;
     height: 40%;
 }
+
+
+/*Table style of w3schools*/
+table {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  table td, table th {
+    border: 1px solid #ddd;
+    padding: 8px;
+    color:black;
+    font-weight: bold;
+  }
+  
+  table tr:nth-child(even){background-color: #f2f2f2;}
+  
+  table tr:hover {background-color: #ddd;}
+  
+  table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: maroon;
+    color: white;
+  }
+
+ 
