@@ -154,7 +154,7 @@ function reset() {
 function createUserStore(event) {
 
     event.preventDefault();
-    let locationName = Number(event.target.location.value);
+    let locationName = event.target.location.value;
     let minCustomer = Number(event.target.minCustomer.value);
     let maxCustomer = Number(event.target.maxCustomer.value);
     let avgCustomer = Number(event.target.avgCustomer.value);
