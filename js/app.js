@@ -31,15 +31,16 @@ let Seattle = new Store(Locations[0], minOpj[0], maxOpj[0], avgOpj[0]);
 let Tokyo = new Store(Locations[1], minOpj[1], maxOpj[1], avgOpj[1]);
 let Dubai = new Store(Locations[2], minOpj[2], maxOpj[2], avgOpj[2]);
 let Paris = new Store(Locations[3], minOpj[3], maxOpj[3], avgOpj[3]);
-let Lima = new Store(Locations[4], Number(minOpj[4]), Number(maxOpj[4]), Number(avgOpj[4]));
+let Lima = new Store(Locations[4], minOpj[4], maxOpj[4], avgOpj[4]);
 
 
 
 // random number of customers each hour each store
 Store.prototype.RandomNumber = function () {
     for (let i = 0; i < time.length; i++) {
-        // this.custNum.push(Math.floor(Math.random() * (this.Max - this.Min + 1) + this.Min));
-        this.custNum.push(Math.floor(Math.random() * (this.Max - this.Min) + this.Min));
+        this.custNum.push(Math.floor(Math.random() * (this.Max - this.Min + 1) + this.Min));
+        
+        // this.custNum.push(Math.floor(Math.random() * (this.Max - this.Min) + this.Min));
     }
 };
 
