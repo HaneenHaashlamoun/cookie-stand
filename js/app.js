@@ -38,7 +38,8 @@ let Lima = new Store(Locations[4], minOpj[4], maxOpj[4], avgOpj[4]);
 // random number of customers each hour each store
 Store.prototype.RandomNumber = function () {
     for (let i = 0; i < time.length; i++) {
-        this.custNum.push(Math.floor(Math.random() * (this.Max - this.Min + 1) + this.Min));
+        // this.custNum.push(Math.floor(Math.random() * (this.Max - this.Min + 1) + this.Min));
+        this.custNum.push(Math.floor(Math.random() * (this.Max - this.Min) + this.Min));
     }
 };
 
